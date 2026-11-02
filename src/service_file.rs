@@ -22,7 +22,7 @@ impl ServiceFile {
     pub fn get_artist(file_name: &String) -> Option<String> {
         if let Some(index_one) = file_name.find(".") {
             if let Some(index_two) = file_name.rfind("-") {
-                return Some(file_name[index_one..index_two].trim().to_string());
+                return Some(file_name[index_one+1..index_two].trim().to_string());
             }
         }
 
